@@ -1,23 +1,54 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from "vue";
+import Router from "vue-router";
+import App from "./App.vue";
 
-Vue.use(Router)
+const Home = () => import("./views/Home.vue");
+const About = () => import("./views/About.vue");
+const Philosophy = () => import("./views/Philosophy.vue");
+const Projects = () => import("./views/Projects.vue");
+// const Contact = () => import("./views/Contact.vue");
+// const Team = () => import("./views/Team.vue");
+
+Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
-  ]
-})
+	routes: [
+		{
+			path: "/",
+			redirect: "/home",
+			component: App,
+			children: [
+				{
+					path: "/home",
+					name: "home",
+					component: Home
+				},
+				{
+					path: "/about",
+					name: "about",
+					component: About
+				},
+				{
+					path: "/philosophy",
+					name: "philosophy",
+					component: Philosophy
+				},
+				{
+					path: "/projects",
+					name: "projects",
+					component: Projects
+				},
+				// {
+				// 	path: "/contact",
+				// 	name: "contact",
+				// 	component: Contact
+				// },
+				// {
+				// 	path: "/team",
+				// 	name: "team",
+				// 	component: Team
+				// }
+			]
+		}
+	]
+});
