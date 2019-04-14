@@ -60,10 +60,11 @@
         transform: translate(-50%, -50%);
     }
 }
+
 @media (min-width: 320px) and (max-width: 1439px) { /* Tablets, Ipad (Portrait) */
     .projects-page{
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
     }
     .text{
         transform: translate(-50%, -50%);

@@ -1,5 +1,15 @@
 <template>
-    <div class="sidebar">
+    <div class="sidebar-page">
+        <div class="meta-navigation">
+            <router-link to="/home">
+                <div class="logo">
+                    <img src="/img/Main/sidebar.svg" alt="logo">
+                </div>
+            </router-link>
+            <div class="menu">
+                <span>Закрыть</span>
+            </div>
+        </div>
         <div class="sidebar-content">
             <div class="sidebar-menu">
                 <div class="sidebar-menu_item">
@@ -20,3 +30,4 @@
         </div>
     </div>
 </template>
+<style scoped src="../meta.css"></style>

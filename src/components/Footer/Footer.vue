@@ -1,7 +1,7 @@
 <template>
     <div class="footer-wrap">
         <div class="footer">
-            <div class="mail">
+            <div class="mail" @click="contactModal = true">
                 <div class="mail-img">
                     <img :src="setLogo ? '/img/Main/EnvelopeBlack.svg' : '/img/Main/Envelope.svg'">
                 </div>
@@ -14,14 +14,21 @@
                 {{language}}
             </div>
         </div>
+        <contact-modal 
+            v-if="contactModal" 
+            @close="contactModal = false"></contact-modal>
     </div>
 </template>
 <script>
 import { mapState } from 'vuex'
 export default {
-    props: {
-        sidebar: Boolean,
-        modal: Boolean
+    data(){
+        return{
+            contactModal: false
+        }
+    },
+    components: {
+        ContactModal: () => import('./ContactModal')
     },
     computed: {
         ...mapState(['language']),

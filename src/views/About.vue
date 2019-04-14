@@ -175,13 +175,13 @@ export default {
         padding-left: 100px; 
     }
 }
-@media screen and (max-width: 1366px) and (orientation: landscape){ /* laptop IPAD PRO */
+@media screen and (max-width: 1366px){
     .background-circle{
-        width: 550px;
-        height: 550px;
+        width: 420px;
+        height: 420px;
     }
     .menu{
-        padding-left: 100px; 
+        padding-left: 70px; 
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) { /* Tablets, Ipad (Portrait) */
@@ -213,14 +213,16 @@ export default {
     .about-content{
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     .menu{
+        margin-right: 70px;
         font-size: 1rem;
         padding-top: 20px;
         flex-direction: row;
     }
     .menu-item{
-        padding-right: 25px;
+        padding-right: 20px;
     }
     .item-3{
         padding-right: 0;
@@ -239,13 +241,14 @@ export default {
         align-items: center;
     }
     .menu{
+        margin-right: 70px;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         padding-top: 20px;
         flex-direction: row;
     }
     .menu-item{
-        padding-right: 25px;
+        padding-right: 20px;
     }
     .item-3{
         padding-right: 0;
@@ -264,6 +267,7 @@ export default {
         align-items: center;
     }
     .menu{
+        margin-right: 70px;
         text-align: center;
         font-size: 1rem;
         padding-top: 20px;

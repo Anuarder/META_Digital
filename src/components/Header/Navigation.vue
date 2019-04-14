@@ -15,6 +15,10 @@
 <script>
 export default {
     name: "meta-navigation",
+    props: {
+        modal: Boolean,
+        sidebar: Boolean
+    }
 }
 </script>
 <style scoped>
