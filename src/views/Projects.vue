@@ -2,6 +2,7 @@
     <div class="projects-page">
          <div class="navigation">
             <meta-navigation></meta-navigation>
+            <meta-arrow></meta-arrow>
         </div>
         <div class="projects">
             <div class="text">
@@ -52,12 +53,8 @@
 }
 
 @media (min-width: 1921px) {
-    .projects-page{
-        background-size: cover;
-        background-position: bottom;
-    }
     .text{
-        transform: translate(-50%, -50%);
+        left: 50%;
     }
 }
 

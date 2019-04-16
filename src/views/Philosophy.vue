@@ -2,6 +2,7 @@
     <div class="philosophy-page" @mousemove="followMouse">
         <div class="navigation">
             <meta-navigation></meta-navigation>
+            <meta-arrow></meta-arrow>
         </div>
         <div class="philosophy">
             <div class="content" :style="!mobile ? cursorStyle : ''">
@@ -18,7 +19,7 @@
                     <h3>
                         здесь 
                         <span class="colored-text">
-                            43.2220° N, 76.8512° E
+                            43°12'17.3"N, 76°54'57.2"E
                         </span>
                     </h3>
                 </div>
@@ -143,25 +144,26 @@ export default {
         background-size: 40vh;
     }
     .title h2{
-        font-size: 3rem;
+        font-size: 2rem;
+        margin-bottom: 1px;
     }
     .title h3{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .quote{
         padding-left: 200px; 
         width: 800px;
     }
     .quote h1{
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
     .quote p{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         line-height: 1.4rem;
     }
     .quote h4{
         margin-top: 50px;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 @media screen and (max-width: 1366px) and (orientation: landscape){ /* IPAD PRO */

@@ -19,5 +19,4 @@ a{
 .colored-text {
     color: #24f2ad;
 }
-
 </style>

@@ -2,6 +2,7 @@
     <div class="team-page">
         <div class="navigation">
             <meta-navigation></meta-navigation>
+            <meta-arrow></meta-arrow>
         </div>
         <div class="team">
             <div class="team-slider">

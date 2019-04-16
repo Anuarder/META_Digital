@@ -6,18 +6,23 @@
                     <img src="/img/Main/logo.svg" alt="logo">
                 </div>
             </router-link>
-            <div class="menu">
+            <div class="menu" @click="sidebar = true">
                 <img src="/img/Main/menu.svg">
             </div>
         </div>
+        <meta-sidebar v-if="sidebar" @close="sidebar = false"></meta-sidebar>
     </div>
 </template>
 <script>
 export default {
     name: "meta-navigation",
-    props: {
-        modal: Boolean,
-        sidebar: Boolean
+    components: {
+        MetaSidebar: () => import('./Sidebar.vue')
+    },
+    data(){
+        return{
+            sidebar: false
+        }
     }
 }
 </script>
@@ -28,6 +33,9 @@ export default {
     top: 0;
     display: flex;
     justify-content: space-between;
+}
+.menu{
+    cursor: pointer;
 }
 @media (min-width: 481px) and (max-width: 850px) and (orientation: landscape){
     .meta-navigation {
